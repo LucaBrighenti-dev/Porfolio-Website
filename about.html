@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About | [YOUR NAME]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-effects" aria-hidden="true">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="grid-overlay"></div>
+        <div class="noise-overlay"></div>
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none"><path d="M25 5L45 15V35L25 45L5 35V15L25 5Z" stroke="currentColor" stroke-width="2"/><circle cx="25" cy="25" r="8" fill="currentColor"/></svg></div>
+                <div class="logo-text"><span class="logo-name">[NAME]</span><span class="logo-subtitle">Aerospace + CS</span></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link">Projects</a></li>
+                <li><a href="about.html" class="nav-link active">About</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta"><span class="pulse-dot"></span>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">About</span></nav>
+            <h1 class="page-title">About Me</h1>
+            <p class="page-description">Bridging the gap between aerospace hardware and intelligent software</p>
+        </div>
+    </header>
+
+    <section class="section about-section">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-image">
+                    <div class="profile-frame large">
+                        <div class="frame-border"></div>
+                        <div class="frame-corner tl"></div>
+                        <div class="frame-corner tr"></div>
+                        <div class="frame-corner bl"></div>
+                        <div class="frame-corner br"></div>
+                        <div class="profile-image">
+                            <div class="profile-placeholder">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
+                                    <path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/>
+                                    <circle cx="12" cy="7" r="4"/>
+                                </svg>
+                                <span>Your Photo</span>
+                            </div>
+                        </div>
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+                <div class="about-content">
+                    <h2>Engineer. Developer. Problem Solver.</h2>
+                    <p>I'm a dual-degree student in <strong>Aerospace Engineering (Honours)</strong> and <strong>Computer Science</strong> at [University Name], expected to graduate in [Month Year].</p>
+                    <p>My work focuses on the intersection of <strong>physical systems</strong> and <strong>intelligent software</strong>—building autonomous systems that can perceive, decide, and act in the real world.</p>
+                    <p>From sensor fusion algorithms running on embedded hardware to machine learning models deployed at the edge, I enjoy tackling complex engineering challenges that span multiple domains.</p>
+                    <div class="about-stats">
+                        <div class="about-stat"><span class="about-stat-number">5+</span><span class="about-stat-label">Projects Completed</span></div>
+                        <div class="about-stat"><span class="about-stat-number">2</span><span class="about-stat-label">Degrees in Progress</span></div>
+                        <div class="about-stat"><span class="about-stat-number">6+</span><span class="about-stat-label">Languages Known</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section focus-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Areas of Focus</span>
+                <h2 class="section-title">What I Work On</h2>
+            </div>
+            <div class="focus-grid">
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/><line x1="2" y1="12" x2="22" y2="12"/></svg></div>
+                    <h3>Autonomous Systems</h3>
+                    <p>Navigation, control systems, and state estimation for vehicles that operate without human intervention.</p>
+                </div>
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/><line x1="9" y1="1" x2="9" y2="4"/><line x1="15" y1="1" x2="15" y2="4"/><line x1="9" y1="20" x2="9" y2="23"/><line x1="15" y1="20" x2="15" y2="23"/><line x1="20" y1="9" x2="23" y2="9"/><line x1="20" y1="14" x2="23" y2="14"/><line x1="1" y1="9" x2="4" y2="9"/><line x1="1" y1="14" x2="4" y2="14"/></svg></div>
+                    <h3>Embedded Systems</h3>
+                    <p>Real-time software for microcontrollers and specialized hardware in resource-constrained environments.</p>
+                </div>
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg></div>
+                    <h3>Machine Learning</h3>
+                    <p>Computer vision, sensor fusion, and edge deployment of ML models for perception systems.</p>
+                </div>
+                <div class="focus-card" data-tilt>
+                    <div class="focus-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <h3>Robotics</h3>
+                    <p>Integration of mechanical, electrical, and software systems to create intelligent machines.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills-section" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">Technical Stack</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-description">Full-stack engineering from firmware to AI</p>
+            </div>
+            <div class="skills-full-grid">
+                <div class="skill-card" data-tilt>
+                    <div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/></svg></div>
+                    <h3>Languages</h3>
+                    <div class="skill-list">
+                        <span class="skill-item expert">C / C++</span>
+                        <span class="skill-item expert">Python</span>
+                        <span class="skill-item">MATLAB</span>
+                        <span class="skill-item">Rust</span>
+                        <span class="skill-item">JavaScript</span>
+                        <span class="skill-item">SQL</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9"/></svg></div>
+                    <h3>Frameworks</h3>
+                    <div class="skill-list">
+                        <span class="skill-item expert">ROS / ROS2</span>
+                        <span class="skill-item expert">TensorFlow</span>
+                        <span class="skill-item">PyTorch</span>
+                        <span class="skill-item">OpenCV</span>
+                        <span class="skill-item">Simulink</span>
+                        <span class="skill-item">FreeRTOS</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></div>
+                    <h3>Hardware</h3>
+                    <div class="skill-list">
+                        <span class="skill-item expert">STM32</span>
+                        <span class="skill-item expert">Jetson</span>
+                        <span class="skill-item">Arduino</span>
+                        <span class="skill-item">Raspberry Pi</span>
+                        <span class="skill-item">ESP32</span>
+                        <span class="skill-item">PCB Design</span>
+                    </div>
+                </div>
+                <div class="skill-card" data-tilt>
+                    <div class="skill-card-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg></div>
+                    <h3>Tools</h3>
+                    <div class="skill-list">
+                        <span class="skill-item expert">Git</span>
+                        <span class="skill-item expert">Linux</span>
+                        <span class="skill-item">Docker</span>
+                        <span class="skill-item">SOLIDWORKS</span>
+                        <span class="skill-item">ANSYS</span>
+                        <span class="skill-item">Altium</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section timeline-section">
+        <div class="container">
+            <div class="timeline-dual">
+                <!-- Education Timeline -->
+                <div class="timeline-column">
+                    <div class="timeline-column-header">
+                        <div class="timeline-icon education">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
+                                <path d="M6 12v5c3 3 9 3 12 0v-5"/>
+                            </svg>
+                        </div>
+                        <h3>Education</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">[Start Year] - Present</span>
+                                <h4>Bachelor of Engineering (Honours) - Aerospace</h4>
+                                <p class="timeline-org">[University Name]</p>
+                                <p>Focus on flight dynamics, control systems, and autonomous vehicles. GPA: [X.X]</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">[Start Year] - Present</span>
+                                <h4>Bachelor of Science - Computer Science</h4>
+                                <p class="timeline-org">[University Name]</p>
+                                <p>Specialization in machine learning and embedded systems.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Experience Timeline -->
+                <div class="timeline-column">
+                    <div class="timeline-column-header">
+                        <div class="timeline-icon experience">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
+                                <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
+                            </svg>
+                        </div>
+                        <h3>Experience</h3>
+                    </div>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">[Start] - [End]</span>
+                                <h4>[Role Title]</h4>
+                                <p class="timeline-org">[Company / Organization]</p>
+                                <p>Brief description of responsibilities and achievements.</p>
+                                <div class="timeline-tech"><span>Tech 1</span><span>Tech 2</span><span>Tech 3</span></div>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <span class="timeline-date">[Start] - [End]</span>
+                                <h4>[Role Title]</h4>
+                                <p class="timeline-org">[Company / Organization]</p>
+                                <p>Description of your work and impact.</p>
+                                <div class="timeline-tech"><span>Tech 1</span><span>Tech 2</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section cta-section">
+        <div class="container">
+            <div class="cta-card">
+                <div class="cta-bg"></div>
+                <div class="cta-content">
+                    <h2>Let's Connect</h2>
+                    <p>Interested in discussing opportunities or collaborations?</p>
+                    <a href="contact.html" class="btn btn-primary btn-large">
+                        <span class="btn-content"><span class="btn-text">Get In Touch</span><svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 2L11 13M22 2l-7 20-4-9-9-4 20-7z"/></svg></span>
+                        <span class="btn-glow"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 50 50" fill="none">
+                        <path class="logo-path" d="M25 5L45 15V35L25 45L5 35V15L25 5Z" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="25" cy="25" r="8" fill="currentColor" class="logo-core"/>
+                        <path d="M25 5V45M5 15L45 35M45 15L5 35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                    </svg>
+                    </div>
+                    <span class="footer-name">[YOUR NAME]</span>
+                </div>
+
+                <div class="footer-links">
+                    <a href="https://github.com/[USERNAME]" target="_blank" class="footer-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 0.5C5.5 0.5 0.5 5.7 0.5 12.3c0 5.3 3.4 9.8 8.1 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.3 1.8 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.4-5.4-6.1 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.8-5.5 6.1.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.7-1.6 8.1-6.1 8.1-11.4C23.5 5.7 18.5 0.5 12 0.5z"/>
+                        </svg>
+                    </a>
+
+                    <a href="[LINKEDIN]" target="_blank" class="footer-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0.5 23.5h4V7.5h-4v16zM8 7.5h3.8v2.2h.1c.5-.9 1.7-2.4 3.9-2.4 4.2 0 5 2.8 5 6.4v9.8h-4v-8.7c0-2.1 0-4.7-2.9-4.7-2.9 0-3.3 2.2-3.3 4.6v8.8H8v-16z"/>
+                        </svg>
+                    </a>
+
+                    <a href="mailto:your.email@example.com" class="footer-link" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">© 2024 [YOUR NAME]. Engineered with precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

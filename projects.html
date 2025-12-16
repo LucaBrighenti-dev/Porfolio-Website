@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Projects | [YOUR NAME]</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600;700&family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="bg-effects" aria-hidden="true">
+        <div class="gradient-orb gradient-orb-1"></div>
+        <div class="gradient-orb gradient-orb-2"></div>
+        <div class="grid-overlay"></div>
+        <div class="noise-overlay"></div>
+        <canvas id="particleCanvas" class="particle-canvas"></canvas>
+    </div>
+    <div class="cursor-glow" id="cursorGlow"></div>
+    <div class="cursor-dot" id="cursorDot"></div>
+
+    <nav class="nav">
+        <div class="nav-container">
+            <a href="index.html" class="nav-logo">
+                <div class="logo-icon"><svg viewBox="0 0 50 50" fill="none"><path d="M25 5L45 15V35L25 45L5 35V15L25 5Z" stroke="currentColor" stroke-width="2"/><circle cx="25" cy="25" r="8" fill="currentColor"/></svg></div>
+                <div class="logo-text"><span class="logo-name">[NAME]</span><span class="logo-subtitle">Aerospace + CS</span></div>
+            </a>
+            <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false" id="navToggle"><span class="hamburger-line"></span><span class="hamburger-line"></span><span class="hamburger-line"></span></button>
+            <ul class="nav-menu" id="navMenu">
+                <li><a href="index.html" class="nav-link">Home</a></li>
+                <li><a href="projects.html" class="nav-link active">Projects</a></li>
+                <li><a href="about.html" class="nav-link">About</a></li>
+                <li><a href="contact.html" class="nav-link nav-cta"><span class="pulse-dot"></span>Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <header class="page-header">
+        <div class="container">
+            <nav class="breadcrumb"><a href="index.html">Home</a><span class="breadcrumb-sep">/</span><span class="breadcrumb-current">Projects</span></nav>
+            <h1 class="page-title">Technical Portfolio</h1>
+            <p class="page-description">Projects in autonomous systems, robotics, and software engineering</p>
+        </div>
+    </header>
+
+    <section class="section projects-page">
+        <div class="container">
+            <div class="filter-bar">
+                <div class="filter-buttons">
+                    <button class="filter-btn active" data-filter="all">All</button>
+                    <button class="filter-btn" data-filter="aerospace">Aerospace</button>
+                    <button class="filter-btn" data-filter="robotics">Robotics</button>
+                    <button class="filter-btn" data-filter="software">Software</button>
+                </div>
+                <span class="project-count"><span id="projectCount">4</span> projects</span>
+            </div>
+
+            <div class="projects-grid">
+                <article class="project-card featured" data-category="aerospace">
+                    <div class="project-image">
+                        <div class="image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M21.44 11.05l-9.19 9.19a6 6 0 0 1-8.49-8.49l9.19-9.19a4 4 0 0 1 5.66 5.66l-9.2 9.19a2 2 0 0 1-2.83-2.83l8.49-8.48"/></svg></div>
+                        <!-- Replace with: <img src="project1.jpg" alt="Project Name" /> -->
+                        <div class="project-overlay"><a href="#" class="overlay-btn">View Details</a></div>
+                        <span class="project-badge featured">Featured</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="meta-category">Autonomous Systems</span><span class="meta-date">2024</span></div>
+                        <h2 class="project-title">[Project Name]</h2>
+                        <p class="project-description">Brief description focusing on impact and technical innovation.</p>
+                        <div class="project-metrics">
+                            <div class="metric"><span class="metric-value">200Hz</span><span class="metric-label">Fusion</span></div>
+                            <div class="metric"><span class="metric-value">&lt;5ms</span><span class="metric-label">Latency</span></div>
+                            <div class="metric"><span class="metric-value">60%</span><span class="metric-label">Gain</span></div>
+                        </div>
+                        <div class="project-tech"><span>C++</span><span>ROS2</span><span>STM32</span><span>Kalman</span></div>
+                        <div class="project-links">
+                            <a href="#" class="link-btn primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code</a>
+                            <a href="#" class="link-btn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6M15 3h6v6M10 14L21 3"/></svg>Demo</a>
+                        </div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="robotics">
+                    <div class="project-image-small">
+                        <div class="image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><circle cx="12" cy="12" r="10"/><path d="M12 16v-4M12 8h.01"/></svg></div>
+                        <!-- Replace with: <img src="project2.jpg" alt="Project Name" /> -->
+                        <span class="project-badge">Completed</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="meta-category">Computer Vision</span><span class="meta-date">2024</span></div>
+                        <h2 class="project-title">[Project Name]</h2>
+                        <p class="project-description">Description of your computer vision project.</p>
+                        <div class="project-tech"><span>Python</span><span>TensorFlow</span><span>OpenCV</span></div>
+                        <div class="project-links"><a href="#" class="link-btn primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="aerospace">
+                    <div class="project-image-small">
+                        <div class="image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+                        <!-- Replace with: <img src="project3.jpg" alt="Project Name" /> -->
+                        <span class="project-badge">Completed</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="meta-category">Flight Dynamics</span><span class="meta-date">2023</span></div>
+                        <h2 class="project-title">[Project Name]</h2>
+                        <p class="project-description">Flight dynamics simulation project.</p>
+                        <div class="project-tech"><span>MATLAB</span><span>Simulink</span><span>C</span></div>
+                        <div class="project-links"><a href="#" class="link-btn primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>Report</a></div>
+                    </div>
+                </article>
+
+                <article class="project-card" data-category="software">
+                    <div class="project-image-small">
+                        <div class="image-placeholder"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1"><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/></svg></div>
+                        <!-- Replace with: <img src="project4.jpg" alt="Project Name" /> -->
+                        <span class="project-badge in-progress">In Progress</span>
+                    </div>
+                    <div class="project-content">
+                        <div class="project-meta"><span class="meta-category">Embedded ML</span><span class="meta-date">2024</span></div>
+                        <h2 class="project-title">[Project Name]</h2>
+                        <p class="project-description">Edge ML deployment project.</p>
+                        <div class="project-tech"><span>TensorFlow Lite</span><span>Edge TPU</span><span>Python</span></div>
+                        <div class="project-links"><a href="#" class="link-btn primary"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>Code</a></div>
+                    </div>
+                </article>
+            </div>
+
+            <div class="github-cta">
+                <div class="github-card">
+                    <svg class="github-icon" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
+                    <div class="github-content"><h3>More on GitHub</h3><p>Explore additional projects and contributions</p></div>
+                    <a href="https://github.com/[USERNAME]" target="_blank" class="btn btn-outline"><span class="btn-content"><span class="btn-text">View Profile</span></span></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <div class="footer-logo">
+                        <svg viewBox="0 0 50 50" fill="none">
+                        <path class="logo-path" d="M25 5L45 15V35L25 45L5 35V15L25 5Z" stroke="currentColor" stroke-width="2"/>
+                        <circle cx="25" cy="25" r="8" fill="currentColor" class="logo-core"/>
+                        <path d="M25 5V45M5 15L45 35M45 15L5 35" stroke="currentColor" stroke-width="1" opacity="0.3"/>
+                    </svg>
+                    </div>
+                    <span class="footer-name">[YOUR NAME]</span>
+                </div>
+
+                <div class="footer-links">
+                    <a href="https://github.com/[USERNAME]" target="_blank" class="footer-link" aria-label="GitHub">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M12 0.5C5.5 0.5 0.5 5.7 0.5 12.3c0 5.3 3.4 9.8 8.1 11.4.6.1.8-.3.8-.6v-2.2c-3.3.7-4-1.4-4-1.4-.5-1.3-1.3-1.6-1.3-1.6-1.1-.8.1-.8.1-.8 1.2.1 1.8 1.3 1.8 1.3 1.1 1.9 2.9 1.3 3.6 1 .1-.8.4-1.3.7-1.6-2.6-.3-5.4-1.4-5.4-6.1 0-1.3.5-2.4 1.2-3.2-.1-.3-.5-1.6.1-3.2 0 0 1-.3 3.3 1.2.9-.3 1.9-.4 3-.4s2.1.1 3 .4c2.3-1.5 3.3-1.2 3.3-1.2.6 1.6.2 2.9.1 3.2.8.8 1.2 1.9 1.2 3.2 0 4.7-2.8 5.8-5.5 6.1.4.4.8 1.1.8 2.2v3.2c0 .3.2.7.8.6 4.7-1.6 8.1-6.1 8.1-11.4C23.5 5.7 18.5 0.5 12 0.5z"/>
+                        </svg>
+                    </a>
+
+                    <a href="[LINKEDIN]" target="_blank" class="footer-link" aria-label="LinkedIn">
+                        <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                            <path d="M4.98 3.5C4.98 4.88 3.87 6 2.5 6S0 4.88 0 3.5 1.12 1 2.5 1s2.48 1.12 2.48 2.5zM0.5 23.5h4V7.5h-4v16zM8 7.5h3.8v2.2h.1c.5-.9 1.7-2.4 3.9-2.4 4.2 0 5 2.8 5 6.4v9.8h-4v-8.7c0-2.1 0-4.7-2.9-4.7-2.9 0-3.3 2.2-3.3 4.6v8.8H8v-16z"/>
+                        </svg>
+                    </a>
+
+                    <a href="mailto:your.email@example.com" class="footer-link" aria-label="Email">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </a>
+                </div>
+
+                <p class="footer-copyright">© 2024 [YOUR NAME]. Engineered with precision.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
